@@ -1,17 +1,16 @@
+#include "greeting_utils.h"
 #include <iostream>
 #include <string>
-#include "greeting_utils.h"
 
 int main() {
-    std::cout << "Enter your name: ";
     std::string name;
     std::getline(std::cin, name);
 
     std::string message = GreetingUtils::create_message(name);
-    char* cstr = GreetingUtils::format_as_c_string(message);
+    char* c_message = GreetingUtils::format_as_c_string(message);
 
-    std::cout << cstr << std::endl;
+    std::cout << c_message << std::endl;
 
-    delete[] cstr;
+    delete[] c_message; // free heap memory
     return 0;
 }

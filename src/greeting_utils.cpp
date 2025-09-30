@@ -8,8 +8,7 @@ namespace GreetingUtils {
     }
 
     char* format_as_c_string(const std::string& msg) {
-        size_t len = msg.length();
-        char* cstr = new char[len + 1]; // +1 for null terminator
+        char* cstr = new char[msg.size() + 1]; // +1 for null terminator
         std::strcpy(cstr, msg.c_str());
         return cstr;
     }

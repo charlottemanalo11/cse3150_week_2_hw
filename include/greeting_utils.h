@@ -9,4 +9,3 @@ namespace GreetingUtils {
 }
 
 #endif // GREETING_UTILS_H
-
